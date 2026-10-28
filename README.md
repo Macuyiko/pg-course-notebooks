@@ -1,28 +1,19 @@
 # Deep learning · Postgraduate hands-on
 
-Train, inspect, and experiment with neural networks in a **90-minute hands-on session**.
-Start with image classification, move to sequences, then generate new images with a VAE.
 
-## Core notebooks
+## Notebooks
 
 Open a notebook on GitHub to read it, or click **Open in Colab** to run it in your browser.
 
 | Notebook | What you will do | Time | Run |
 |---|---|---:|---|
-| [1 · Multilayer perceptrons](01_mlp.ipynb) | Classify clothing images. Inspect errors and experiment with regularisation. | 20 min | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/dl-course-notebooks/blob/main/Postgraduate/01_mlp.ipynb) |
-| [2 · CNNs & transfer learning](02_cnn.ipynb) | Compare a CNN with the MLP. Use ResNet-18 on pet breeds and inspect saliency and Grad-CAM. | 22 min | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/dl-course-notebooks/blob/main/Postgraduate/02_cnn.ipynb) |
-| [3 · Recurrent networks](03_rnn.ipynb) | Classify IMDB movie reviews with word embeddings and a GRU. Compare scores and training time. | 22 min | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/dl-course-notebooks/blob/main/Postgraduate/03_rnn.ipynb) |
-| [4 · Autoencoders & VAEs](04_vae.ipynb) | Learn from colored shapes. Inspect reconstructions, sample new images, and interpolate in latent space. | 20 min | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/dl-course-notebooks/blob/main/Postgraduate/04_vae.ipynb) |
+| [0 · Universal approximation](00_uat.ipynb) | Watch a network learn a 2D decision boundary, then compare hidden-layer widths. | Optional | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/00_uat.ipynb) |
+| [1 · Multilayer perceptrons](01_mlp.ipynb) | Classify clothing images. Inspect errors and experiment with regularisation. | 20 min | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/01_mlp.ipynb) |
+| [2 · CNNs & transfer learning](02_cnn.ipynb) | Compare a CNN with the MLP. Use ResNet-18 on pet breeds and inspect saliency and Grad-CAM. | 22 min | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/02_cnn.ipynb) |
+| [3 · Recurrent networks](03_rnn.ipynb) | Classify IMDB movie reviews with word embeddings and a GRU. Compare scores and training time. | 22 min | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/03_rnn.ipynb) |
+| [4 · Autoencoders & VAEs](04_vae.ipynb) | Learn from colored shapes. Inspect reconstructions, sample new images, and interpolate in latent space. | 20 min | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/04_vae.ipynb) |
+| [5 · Melody generation](05_mus.ipynb) | Train a GRU on Nottingham melodies and listen to continuations at different temperatures. Playback uses a fixed duration per note. | Optional | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/05_mus.ipynb) |
 
-The activities total 84 minutes, leaving a few minutes for transitions.
-If time runs short, move notebook 4 to homework.
-
-## Optional demos
-
-| Notebook | What you will explore | Run |
-|---|---|---|
-| [0 · Universal approximation](00_uat.ipynb) | Watch a network learn a 2D decision boundary, then compare hidden-layer widths. | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/dl-course-notebooks/blob/main/Postgraduate/00_uat.ipynb) |
-| [5 · Melody generation](05_mus.ipynb) | Train a GRU on Nottingham melodies and listen to continuations at different temperatures. Playback uses a fixed duration per note. | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/dl-course-notebooks/blob/main/Postgraduate/05_mus.ipynb) |
 
 ## Getting started
 
@@ -31,8 +22,6 @@ If time runs short, move notebook 4 to homework.
 3. Select **Runtime → Run all**, or work through the cells in order.
 4. Change the settings in the exercises and rerun the relevant cells to compare results.
 
-Use `QUICK = True` for the in-class run and `QUICK = False` for longer experiments
-where that setting is available. A GPU is useful for longer GRU runs; the shapes VAE also runs on CPU.
 
 ### Data and setup
 
@@ -44,9 +33,6 @@ where that setting is available. A GPU is useful for longer GRU runs; the shapes
 | 3 · RNN | IMDB movie reviews | About 80 MB |
 | 4 · VAE | Generated shapes in three colors | None |
 | 5 · Melody generation | Nottingham MIDI files | Downloaded automatically |
-
-Run the download cells before class. Downloaded data is cached within the runtime;
-starting a fresh Colab runtime requires downloading it again.
 
 Colab provides the main dependencies, including PyTorch, torchvision, NumPy,
 matplotlib, scikit-learn, and IPython. Notebook 3 installs `datasets` if needed;
@@ -68,7 +54,6 @@ The model and loss change. The training loop stays the same.
 
 ## Reference results
 
-Recorded results from `QUICK = True` CPU runs are included below for comparison.
 Results can vary with settings, package versions, and random seeds.
 
 <details>
@@ -84,7 +69,6 @@ Results can vary with settings, package versions, and random seeds.
 | GRU | 0.67 M | IMDB sentiment | 0.89 | 0.81 | 0.820 |
 
 AUC is reported with accuracy for the image models: macro AUC is 0.987 for the MLP and 0.988 for the CNN.
-The programme's earlier tabular session introduces AUC.
 
 ### What to look for
 
