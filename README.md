@@ -5,14 +5,14 @@
 
 Open a notebook on GitHub to read it, or click **Open in Colab** to run it in your browser.
 
-| Notebook | What you will do | Time | Run |
+| Notebook | What you will do | Open |
 |---|---|---:|---|
-| [0 · Universal approximation](00_uat.ipynb) | Watch a network learn a 2D decision boundary, then compare hidden-layer widths. | Optional | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/00_uat.ipynb) |
-| [1 · Multilayer perceptrons](01_mlp.ipynb) | Classify clothing images. Inspect errors and experiment with regularisation. | 20 min | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/01_mlp.ipynb) |
-| [2 · CNNs & transfer learning](02_cnn.ipynb) | Compare a CNN with the MLP. Use ResNet-18 on pet breeds and inspect saliency and Grad-CAM. | 22 min | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/02_cnn.ipynb) |
-| [3 · Recurrent networks](03_rnn.ipynb) | Classify IMDB movie reviews with word embeddings and a GRU. Compare scores and training time. | 22 min | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/03_rnn.ipynb) |
-| [4 · Autoencoders & VAEs](04_vae.ipynb) | Learn from colored shapes. Inspect reconstructions, sample new images, and interpolate in latent space. | 20 min | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/04_vae.ipynb) |
-| [5 · Melody generation](05_mus.ipynb) | Train a GRU on Nottingham melodies and listen to continuations at different temperatures. Playback uses a fixed duration per note. | Optional | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/05_mus.ipynb) |
+| [0 · Universal approximation](00_uat.ipynb) | Watch a network learn a 2D decision boundary, then compare hidden-layer widths. | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/00_uat.ipynb) |
+| [1 · Multilayer perceptrons](01_mlp.ipynb) | Classify clothing images. Inspect errors and experiment with regularisation. | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/01_mlp.ipynb) |
+| [2 · CNNs & transfer learning](02_cnn.ipynb) | Compare a CNN with the MLP. Use ResNet-18 on pet breeds and inspect saliency and Grad-CAM. | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/02_cnn.ipynb) |
+| [3 · Recurrent networks](03_rnn.ipynb) | Classify IMDB movie reviews with word embeddings and a GRU. Compare scores and training time. | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/03_rnn.ipynb) |
+| [4 · Autoencoders & VAEs](04_vae.ipynb) | Learn from colored shapes. Inspect reconstructions, sample new images, and interpolate in latent space. | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/04_vae.ipynb) |
+| [5 · Melody generation](05_mus.ipynb) | Train a GRU on Nottingham melodies and listen to continuations at different temperatures. Playback uses a fixed duration per note. | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/05_mus.ipynb) |
 
 
 ## Getting started
