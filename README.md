@@ -6,7 +6,7 @@
 Open a notebook on GitHub to read it, or click **Open in Colab** to run it in your browser.
 
 | Notebook | What you will do | Open |
-|---|---|---:|---|
+|---|---|---|
 | [0 · Universal approximation](00_uat.ipynb) | Watch a network learn a 2D decision boundary, then compare hidden-layer widths. | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/00_uat.ipynb) |
 | [1 · Multilayer perceptrons](01_mlp.ipynb) | Classify clothing images. Inspect errors and experiment with regularisation. | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/01_mlp.ipynb) |
 | [2 · CNNs & transfer learning](02_cnn.ipynb) | Compare a CNN with the MLP. Use ResNet-18 on pet breeds and inspect saliency and Grad-CAM. | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Macuyiko/pg-course-notebooks/blob/main/02_cnn.ipynb) |
@@ -22,18 +22,6 @@ Open a notebook on GitHub to read it, or click **Open in Colab** to run it in yo
 3. Select **Runtime → Run all**, or work through the cells in order.
 4. Change the settings in the exercises and rerun the relevant cells to compare results.
 
-
-### Data and setup
-
-| Notebook | Data | Download |
-|---|---|---|
-| 0 · Universal approximation | Generated 2D examples | None |
-| 1 · MLP | Fashion-MNIST | About 30 MB |
-| 2 · CNN | Fashion-MNIST + Oxford-IIIT Pets | About 800 MB for Pets, plus pretrained weights |
-| 3 · RNN | IMDB movie reviews | About 80 MB |
-| 4 · VAE | Generated shapes in three colors | None |
-| 5 · Melody generation | Nottingham MIDI files | Downloaded automatically |
-
 Colab provides the main dependencies, including PyTorch, torchvision, NumPy,
 matplotlib, scikit-learn, and IPython. Notebook 3 installs `datasets` if needed;
 notebook 5 installs `pretty_midi` if needed. No Kaggle account or API key is required.
@@ -43,11 +31,11 @@ notebook 5 installs `pretty_midi` if needed. No Kaggle account or API key is req
 The same five steps recur throughout the notebooks:
 
 ```python
-optimizer.zero_grad()
-out = model(xb)
-loss = criterion(out, yb)
-loss.backward()
-optimizer.step()
+optimizer.zero_grad()          # 1. Forget the gradients of the previous batch
+out  = model(xb)               # 2. Forward pass to get raw scores (logits)
+loss = criterion(out, yb)      # 3. Calculate the loss
+loss.backward()                # 4. Backprop: fill .grad for every weight
+optimizer.step()               # 5. Nudge every weight downhill
 ```
 
 The model and loss change. The training loop stays the same.
